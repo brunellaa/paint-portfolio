@@ -1,11 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import { GlobalStyles } from "./utils/global";
+import Header from "./components/Header";
+import Desktop from "./components/Desktop";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <Desktop />
+    <GlobalStyles />
   </React.StrictMode>,
   document.getElementById("root")
 );
