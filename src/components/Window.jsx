@@ -1,8 +1,13 @@
-import { useState } from "react";
 import styled from "styled-components";
 import Draggable from "react-draggable";
+import About from "./variations/About";
+import Contact from "./variations/Contact";
+import Work from "./variations/Work";
 
 const WindowBox = styled.div`
+  position: absolute;
+  align-self: center;
+  top: 20%;
   background-color: white;
   width: 450px;
   height: 300px;
@@ -20,9 +25,11 @@ const TopBar = styled.div`
   border-bottom: 1px solid black;
 `;
 
+const Content = styled.div``;
+
 const Close = styled.div`
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid #f8dddd;
   width: 20px;
   height: 20px;
   display: flex;
@@ -30,21 +37,26 @@ const Close = styled.div`
   justify-content: center;
 `;
 
-const Window = () => {
-  const [isOpen, setIsOpen] = useState(true);
-  if (isOpen) {
-    return (
-      <Draggable bounds="parent" handle=".draghandle">
-        <WindowBox>
-          <TopBar className="draghandle">
-            <div>File name</div>
-            <Close onClick={() => setIsOpen(false)}>X</Close>
-          </TopBar>
-        </WindowBox>
-      </Draggable>
-    );
-  }
-  return null;
+const Window = ({ id, name, closeWindow }) => {
+  return (
+    <Draggable bounds="parent" handle=".draghandle">
+      <WindowBox>
+        <TopBar className="draghandle">
+          <div>{name}</div>
+          <Close onClick={closeWindow}>X</Close>
+        </TopBar>
+        <Content>
+          {id === "about" ? (
+            <About />
+          ) : id === "contact" ? (
+            <Contact />
+          ) : id === "work" ? (
+            <Work />
+          ) : null}
+        </Content>
+      </WindowBox>
+    </Draggable>
+  );
 };
 
 export default Window;
