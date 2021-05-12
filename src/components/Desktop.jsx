@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
 import Shortcut from "../components/Shortcut";
-import BackgroundImg from "../assets/images/pixel-pattern.png";
 
 const DesktopArea = styled.div`
   background-color: darkslateblue;
@@ -11,8 +9,6 @@ const DesktopArea = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  /* background-image: url(${BackgroundImg});
-  background-size: 600px; */
 `;
 
 const Desktop = () => {
