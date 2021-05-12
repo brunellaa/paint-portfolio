@@ -65,7 +65,7 @@ const Intro = ({ duration }) => {
     setTimeout(() => {
       setisVisible(false);
     }, duration * 1000);
-  }, []);
+  }, [duration]);
 
   return isVisible ? (
     <IntroContainer>
