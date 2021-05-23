@@ -4,7 +4,7 @@ import Shortcut from "../components/Shortcut";
 
 const DesktopArea = styled.div`
   background-color: darkslateblue;
-  height: 95vh;
+  height: 100vh;
   padding: 20px;
   display: flex;
   flex-direction: column;

@@ -3,15 +3,13 @@ import ReactDOM from "react-dom";
 import { GlobalStyles } from "./utils/global";
 
 import Intro from "./components/Intro";
-import Header from "./components/Header";
-import Desktop from "./components/Desktop";
+import Layout from "./components/Layout";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Intro duration={5} />
-    <Header />
-    <Desktop />
+    {/* <Intro /> */}
+    <Layout />
     <GlobalStyles />
   </React.StrictMode>,
   document.getElementById("root")

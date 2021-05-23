@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { screenFlicker, scanLines, rgbText } from "../utils";
+import Typing from "react-typing-animation";
 
 const IntroContainer = styled.div`
   position: fixed;
-  left: 0;
-  top: 0;
+  z-index: 10;
+  padding: 20px;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
@@ -14,13 +15,12 @@ const IntroContainer = styled.div`
 
 const EffectLayer = styled.div`
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 300;
+  z-index: 20;
   opacity: 0.6;
-  will-change: opacity;
   animation: ${screenFlicker} 3s linear infinite;
 
   &:before {
@@ -36,7 +36,6 @@ const EffectLayer = styled.div`
       rgba(255, 255, 255, 0.1) 51%
     );
     background-size: 100% 4px;
-    will-change: background, background-size;
     animation: ${scanLines} 0.5s linear infinite;
   }
 `;
@@ -46,33 +45,54 @@ const TextLayer = styled.div`
   width: 100%;
   height: 100%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: White;
-  font-size: 2rem;
+  font-size: 1rem;
   position: absolute;
   will-change: text-shadow;
-  animation: ${rgbText} 2s steps(9) 0s infinite alternate;
+  animation: ${rgbText} 1s steps(9) 0s infinite alternate;
   pre {
     display: flex;
   }
 `;
 
-const Intro = ({ duration }) => {
+const Intro = ({}) => {
   const [isVisible, setisVisible] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setisVisible(false);
-    }, duration * 1000);
-  }, [duration]);
+    }, 9000);
+  }, []);
+
+  const delay = 500;
 
   return isVisible ? (
     <IntroContainer>
       <EffectLayer />
       <TextLayer>
-        <span>Please wait</span>
-        <span>Loading assets</span>
+        <Typing speed={1} hideCursor={false}>
+          SYSTEM BOOTING
+          <br />
+          <Typing.Delay ms={delay} />
+          Initializing USB controllers
+          <Typing.Speed ms={200} />
+          ...
+          <Typing.Speed ms={1} />
+          <Typing.Delay ms={delay} /> Done
+          <br />
+          <Typing.Delay ms={delay} />
+          Loading visual interface
+          <Typing.Speed ms={200} />
+          ...
+          <Typing.Speed ms={1} />
+          <Typing.Delay ms={delay} /> Done
+          <br />
+          <Typing.Delay ms={delay} />
+          Appliying Website version 2.0
+          <br />
+          <Typing.Delay ms={delay} />
+          WELCOME!
+        </Typing>
       </TextLayer>
     </IntroContainer>
   ) : null;
