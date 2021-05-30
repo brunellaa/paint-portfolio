@@ -55,7 +55,7 @@ const TextLayer = styled.div`
   }
 `;
 
-const Intro = ({}) => {
+const Intro = () => {
   const [isVisible, setisVisible] = useState(true);
 
   useEffect(() => {
