@@ -15,9 +15,9 @@ const DesktopArea = styled.div`
 const Desktop = () => {
   return (
     <DesktopArea>
-      <Shortcut id="about" name="About.txt" />
+      {/* <Shortcut id="about" name="About.txt" /> */}
       <Shortcut id="work" name="My Work" />
-      <Shortcut id="contact" name="Contact me" />
+      {/* <Shortcut id="contact" name="Contact me" /> */}
     </DesktopArea>
   );
 };

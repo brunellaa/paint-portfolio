@@ -11,12 +11,24 @@ const WindowBox = styled.div`
   background-color: white;
   width: 450px;
   height: 300px;
+  min-width: 450px;
+  min-height: 300px;
   border: 1px solid black;
   box-shadow: inset 1px 1px 0 0 #fff, 5px 5px 0 rgba(0, 0, 0, 0.2);
+  /* hide scrollbar ff */
+  scrollbar-width: none;
+  /* hide scrollbar chrome*/
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  overflow: scroll;
+  resize: both;
 `;
 
 const TopBar = styled.div`
   display: flex;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   background-color: lightgray;

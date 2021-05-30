@@ -26,7 +26,7 @@ const ShortcutName = styled.span`
 `;
 
 const Shortcut = ({ name, id }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
