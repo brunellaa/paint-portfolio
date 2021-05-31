@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { screenFlicker, scanLines, rgbText } from "../utils";
+import { rgbText } from "../utils";
 import Typing from "react-typing-animation";
 
 const IntroContainer = styled.div`
@@ -11,33 +11,6 @@ const IntroContainer = styled.div`
   height: 100vh;
   pointer-events: none;
   background-color: black;
-`;
-
-const EffectLayer = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 20;
-  opacity: 0.6;
-  animation: ${screenFlicker} 3s linear infinite;
-
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      to bottom,
-      transparent 50%,
-      rgba(255, 255, 255, 0.1) 51%
-    );
-    background-size: 100% 4px;
-    animation: ${scanLines} 0.5s linear infinite;
-  }
 `;
 
 const TextLayer = styled.div`
@@ -68,7 +41,6 @@ const Intro = () => {
 
   return isVisible ? (
     <IntroContainer>
-      {/* <EffectLayer /> */}
       <TextLayer>
         <Typing speed={1} hideCursor={false}>
           SYSTEM BOOTING
