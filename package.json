@@ -10,7 +10,10 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-draggable": "^4.4.3",
+    "react-full-screen": "^1.0.2",
+    "react-pixelate": "0.0.1",
     "react-scripts": "4.0.3",
+    "react-typing-animation": "^1.6.2",
     "styled-components": "^5.2.3",
     "styled-icons": "^10.33.0",
     "web-vitals": "^1.0.1"

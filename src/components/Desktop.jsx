@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Shortcut from "../components/Shortcut";
+import { gradient } from "../utils";
 
 const DesktopArea = styled.div`
-  background-color: darkslateblue;
-  height: 95vh;
+  background: ${gradient.background};
+  height: 100vh;
   padding: 20px;
   display: flex;
   flex-direction: column;

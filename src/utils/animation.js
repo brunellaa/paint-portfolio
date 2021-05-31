@@ -84,6 +84,7 @@ export const scanLines = keyframes`
   }
 `;
 
+// Intro: rgbText flicker
 export const rgbText = keyframes`
   0% {
     text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6),

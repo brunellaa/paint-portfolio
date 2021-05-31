@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Window from "../components/Window";
+import aboutIcon from "../assets/images/icon-about.png";
 
 const ShortcutBox = styled.div`
   width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 `;
 
 const Icon = styled.img`
-  width: 60px;
-  height: 60px;
-  background-color: black;
+  width: 50px;
+  height: 50px;
   margin-bottom: 10px;
 `;
 
@@ -26,7 +26,7 @@ const ShortcutName = styled.span`
 `;
 
 const Shortcut = ({ name, id }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
@@ -34,7 +34,15 @@ const Shortcut = ({ name, id }) => {
         <Window closeWindow={() => setIsOpen(false)} id={id} name={name} />
       ) : null}
       <ShortcutBox onDoubleClick={() => setIsOpen(true)}>
-        <Icon />
+        <Icon
+          src={
+            id === "about"
+              ? aboutIcon
+              : id === "contact"
+              ? aboutIcon
+              : (id = "work" ? aboutIcon : null)
+          }
+        />
         <ShortcutName>{name}</ShortcutName>
       </ShortcutBox>
     </>
