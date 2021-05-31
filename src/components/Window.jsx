@@ -3,18 +3,19 @@ import Draggable from "react-draggable";
 import About from "./variations/About";
 import Contact from "./variations/Contact";
 import Work from "./variations/Work";
+import { primary, neutral, shadow, border } from "../utils";
 
 const WindowBox = styled.div`
   position: absolute;
   align-self: center;
   top: 20%;
-  background-color: white;
+  background-color: ${neutral[100]};
   width: 450px;
   height: 300px;
   min-width: 450px;
   min-height: 300px;
-  border: 1px solid black;
-  box-shadow: inset 1px 1px 0 0 #fff, 5px 5px 0 rgba(0, 0, 0, 0.2);
+  border: ${border.default};
+  box-shadow: ${shadow.default};
   /* hide scrollbar ff */
   scrollbar-width: none;
   /* hide scrollbar chrome*/
@@ -31,10 +32,11 @@ const TopBar = styled.div`
   top: 0;
   justify-content: space-between;
   align-items: center;
-  background-color: lightgray;
   padding: 4px 6px;
   cursor: grab;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid ${neutral[100]};
+  background-color: ${primary.default};
+  color: white;
 `;
 
 const Content = styled.div``;

@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Shortcut from "../components/Shortcut";
+import { gradient } from "../utils";
 
 const DesktopArea = styled.div`
-  background-color: darkslateblue;
-  background-image: url("../assets/images/pixel-pattern.png");
+  background: ${gradient.background};
   height: 100vh;
   padding: 20px;
   display: flex;
@@ -15,9 +15,9 @@ const DesktopArea = styled.div`
 const Desktop = () => {
   return (
     <DesktopArea>
-      {/* <Shortcut id="about" name="About.txt" /> */}
+      <Shortcut id="about" name="About.txt" />
       <Shortcut id="work" name="My Work" />
-      {/* <Shortcut id="contact" name="Contact me" /> */}
+      <Shortcut id="contact" name="Contact me" />
     </DesktopArea>
   );
 };

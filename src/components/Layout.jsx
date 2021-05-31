@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Desktop from "./Desktop";
+import Noiser from "./Noiser";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
 const Layout = ({ children }) => {
@@ -8,6 +9,7 @@ const Layout = ({ children }) => {
 
   return (
     <FullScreen handle={handle}>
+      <Noiser />
       <Header handle={handle} />
       <Desktop />
     </FullScreen>

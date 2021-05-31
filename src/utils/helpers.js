@@ -1,3 +1,5 @@
+import { neutral } from "./";
+
 export const space = [
   "0.25rem",
   "0.5rem",
@@ -13,6 +15,10 @@ export const space = [
   "16rem",
   "24rem",
 ];
+
+export const shadow = {
+  default: "inset 1px 1px 0 0 #fff, 5px 5px 0 rgba(0, 0, 0, 0.2);",
+};
 
 export const breakpoints = {
   phone: 576,
@@ -40,5 +46,5 @@ export const borderRadius = {
 };
 
 export const border = {
-  default: "1px",
+  default: "2px solid " + neutral[100],
 };

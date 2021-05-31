@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { DateTime } from "luxon";
+import { primary, neutral } from "../utils";
 
 const HeaderContainer = styled.header`
+  border-bottom: 2px solid ${neutral[100]};
+  background-color: ${primary.default};
+  color: ${neutral[100]};
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: gray;
   display: flex;
   justify-content: space-between;
   ul {

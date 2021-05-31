@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { GlobalStyles } from "./utils/global";
-
 import Intro from "./components/Intro";
 import Layout from "./components/Layout";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Intro /> */}
+    <Intro />
     <Layout />
     <GlobalStyles />
   </React.StrictMode>,

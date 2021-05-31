@@ -1,4 +1,5 @@
 import { createGlobalStyle, css } from "styled-components";
+import backgroundImage from "../assets/images/pixel-pattern-2.jpg";
 
 const baseStyles = css`
   html {
@@ -19,7 +20,7 @@ const baseStyles = css`
   body {
     margin: 0;
     font-family: "VT323", monospace;
-    background-color: black;
+    background-image: url(${backgroundImage});
   }
   ul {
     margin: 0;

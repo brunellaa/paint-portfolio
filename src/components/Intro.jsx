@@ -49,7 +49,7 @@ const TextLayer = styled.div`
   font-size: 1rem;
   position: absolute;
   will-change: text-shadow;
-  animation: ${rgbText} 1s steps(9) 0s infinite alternate;
+  animation: ${rgbText} 10s steps(9) 0s infinite alternate;
   pre {
     display: flex;
   }
@@ -61,14 +61,14 @@ const Intro = () => {
   useEffect(() => {
     setTimeout(() => {
       setisVisible(false);
-    }, 9000);
+    }, 1000);
   }, []);
 
   const delay = 500;
 
   return isVisible ? (
     <IntroContainer>
-      <EffectLayer />
+      {/* <EffectLayer /> */}
       <TextLayer>
         <Typing speed={1} hideCursor={false}>
           SYSTEM BOOTING
