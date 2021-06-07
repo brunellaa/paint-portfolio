@@ -34,7 +34,7 @@ const Intro = () => {
   useEffect(() => {
     setTimeout(() => {
       setisVisible(false);
-    }, 1000);
+    }, 9000);
   }, []);
 
   const delay = 500;

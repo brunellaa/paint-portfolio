@@ -51,8 +51,6 @@ const Header = ({ handle }) => {
     <HeaderContainer>
       <ul>
         <li>Welcome to my portfolio!</li>
-        <li>About</li>
-        <li>Themes</li>
       </ul>
       <ul>
         {handle.active ? (

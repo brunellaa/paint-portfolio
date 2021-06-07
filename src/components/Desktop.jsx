@@ -17,6 +17,7 @@ const Desktop = () => {
     <DesktopArea>
       <Shortcut id="about" name="About.txt" />
       <Shortcut id="work" name="My Work" />
+      <Shortcut id="video" name="Video Player" />
       <Shortcut id="contact" name="Contact me" />
     </DesktopArea>
   );

@@ -39,16 +39,16 @@ const Work = () => {
   const data = [
     { name: "1978 CHRYSLER LEBARON COUPÉ 03", source: thumb1 },
     { name: "Chevrolet Caprice Classic Sedan '1980 03", source: thumb2 },
-    { name: "Chevrolet Caprice Classic Sedan '1980 03", source: thumb3 },
-    { name: "Chevrolet Caprice Classic Sedan '1980 03", source: thumb4 },
-    { name: "Chevrolet Caprice Classic Sedan '1980 03", source: thumb5 },
-    { name: "Chevrolet Caprice Classic Sedan '1980 03", source: thumb6 },
-    { name: "Chevrolet Caprice Classic Sedan '1980 03", source: thumb7 },
-    { name: "Chevrolet Caprice Classic Sedan '1980 03", source: thumb8 },
-    { name: "Chevrolet Caprice Classic Sedan '1980 03", source: thumb9 },
-    { name: "Chevrolet Caprice Classic Sedan '1980 03", source: thumb10 },
-    { name: "Chevrolet Caprice Classic Sedan '1980 03", source: thumb11 },
-    { name: "Chevrolet Caprice Classic Sedan '1980 03", source: thumb12 },
+    { name: "FERRARI TESTAROSSA 05", source: thumb3 },
+    { name: "FIAT 132 2000 04", source: thumb4 },
+    { name: "FORD LTD LANDAU 1979 02", source: thumb5 },
+    { name: "FORD SIERRA XR4i ES VE-SPEC 1986 03", source: thumb6 },
+    { name: "LAMBORGHINI COUNTACH 5000 QV 1985 05", source: thumb7 },
+    { name: "Land Rover Range Rover Vogue 1991 02", source: thumb8 },
+    { name: "PORSCHE 959 05", source: thumb9 },
+    { name: "Renault 18 GTS Sedan '1978-81 02", source: thumb10 },
+    { name: "Renault Fuego GTX 02", source: thumb11 },
+    { name: "RENAULT MÉGANE HATCHBACK '2002 02", source: thumb12 },
   ];
 
   const setHiglight = () => {};

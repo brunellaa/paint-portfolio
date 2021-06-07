@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Window from "../components/Window";
 import aboutIcon from "../assets/images/icon-about.png";
+import workIcon from "../assets/images/icon-work.png";
+import contactIcon from "../assets/images/icon-contact.png";
+import videoIcon from "../assets/images/icon-video.png";
 
 const ShortcutBox = styled.div`
   width: 100px;
@@ -38,9 +41,11 @@ const Shortcut = ({ name, id }) => {
           src={
             id === "about"
               ? aboutIcon
-              : id === "contact"
-              ? aboutIcon
-              : (id = "work" ? aboutIcon : null)
+              : id === "work"
+              ? workIcon
+              : id === "video"
+              ? videoIcon
+              : (id = "contact" ? contactIcon : null)
           }
         />
         <ShortcutName>{name}</ShortcutName>
