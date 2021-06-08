@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { rgbText, neutral } from "../utils";
+import { rgbText, neutral, primary } from "../utils";
 import Typing from "react-typing-animation";
 
 const IntroContainer = styled.div`
@@ -10,7 +10,7 @@ const IntroContainer = styled.div`
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  background-color: black;
+  background-color: ${primary.default};
 `;
 
 const TextLayer = styled.div`
