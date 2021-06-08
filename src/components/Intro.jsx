@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { rgbText } from "../utils";
+import { rgbText, neutral, primary } from "../utils";
 import Typing from "react-typing-animation";
 
 const IntroContainer = styled.div`
@@ -10,7 +10,7 @@ const IntroContainer = styled.div`
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  background-color: black;
+  background-color: ${primary.default};
 `;
 
 const TextLayer = styled.div`
@@ -28,13 +28,28 @@ const TextLayer = styled.div`
   }
 `;
 
+const SkipIntro = styled.a`
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  padding: 6px 20px;
+  background-color: rgba(255, 255, 255, 0);
+  color: ${neutral[100]};
+  border: 2px solid ${neutral[100]};
+  pointer-events: initial;
+  cursor: pointer;
+  :hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+`;
+
 const Intro = () => {
   const [isVisible, setisVisible] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setisVisible(false);
-    }, 1000);
+    }, 9000);
   }, []);
 
   const delay = 500;
@@ -66,6 +81,7 @@ const Intro = () => {
           WELCOME!
         </Typing>
       </TextLayer>
+      <SkipIntro onClick={() => setisVisible(false)}>SKIP INTRO</SkipIntro>
     </IntroContainer>
   ) : null;
 };
