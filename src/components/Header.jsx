@@ -20,11 +20,7 @@ const HeaderContainer = styled.header`
   }
 `;
 
-const FullScreenButton = styled.li`
-  cursor: pointer;
-`;
-
-const Header = ({ handle }) => {
+const Header = () => {
   // Date and time display options
   const dateTimePreset = {
     hour: "2-digit",
@@ -53,14 +49,6 @@ const Header = ({ handle }) => {
         <li>Welcome to my portfolio!</li>
       </ul>
       <ul>
-        {handle.active ? (
-          <FullScreenButton onClick={handle.exit}>
-            Exit Fullscreen
-          </FullScreenButton>
-        ) : (
-          <FullScreenButton onClick={handle.enter}>Fullscreen</FullScreenButton>
-        )}
-
         <li>{date}</li>
       </ul>
     </HeaderContainer>

@@ -21,6 +21,15 @@ export const diagonalScroll = keyframes`
   }
 `;
 
+export const slide = keyframes`
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -400px 0;
+  }
+`;
+
 export const toastFade = keyframes`
   0% {
     opacity: 0;

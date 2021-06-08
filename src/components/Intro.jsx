@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { rgbText } from "../utils";
+import { rgbText, neutral } from "../utils";
 import Typing from "react-typing-animation";
 
 const IntroContainer = styled.div`
@@ -25,6 +25,21 @@ const TextLayer = styled.div`
   animation: ${rgbText} 10s steps(9) 0s infinite alternate;
   pre {
     display: flex;
+  }
+`;
+
+const SkipIntro = styled.a`
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  padding: 6px 20px;
+  background-color: rgba(255, 255, 255, 0);
+  color: ${neutral[100]};
+  border: 2px solid ${neutral[100]};
+  pointer-events: initial;
+  cursor: pointer;
+  :hover {
+    background-color: rgba(255, 255, 255, 0.2);
   }
 `;
 
@@ -66,6 +81,7 @@ const Intro = () => {
           WELCOME!
         </Typing>
       </TextLayer>
+      <SkipIntro onClick={() => setisVisible(false)}>SKIP INTRO</SkipIntro>
     </IntroContainer>
   ) : null;
 };
