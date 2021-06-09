@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { screenFlicker, scanLines } from "../utils";
+import { screenFlicker, scanLines } from "../../utils";
 
 const EffectsContainer = styled.div`
   pointer-events: none;

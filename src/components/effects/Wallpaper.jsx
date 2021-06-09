@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { slide, gradient } from "../utils/";
-import PixelBg from "../assets/images/pixel-pattern-2.jpg";
+import { slide, gradient } from "../../utils";
+import PixelBg from "../../assets/images/pixel-pattern-2.jpg";
 
 const WallpaperBox = styled.div`
   position: fixed;

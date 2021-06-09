@@ -28,13 +28,18 @@ const ShortcutName = styled.span`
   padding: 0 4px;
 `;
 
-const Shortcut = ({ name, id }) => {
+const Shortcut = ({ name, id, changeArtwork }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       {isOpen ? (
-        <Window closeWindow={() => setIsOpen(false)} id={id} name={name} />
+        <Window
+          changeArtwork={changeArtwork}
+          closeWindow={() => setIsOpen(false)}
+          id={id}
+          name={name}
+        />
       ) : null}
       <ShortcutBox onDoubleClick={() => setIsOpen(true)}>
         <Icon

@@ -6,7 +6,7 @@ import Work from "./variations/Work";
 import Player from "./variations/Player";
 import { primary, neutral, shadow, border } from "../utils";
 
-const WindowBox = styled.div`
+export const WindowBox = styled.div`
   position: absolute;
   align-self: center;
   top: ${props =>
@@ -62,8 +62,18 @@ const WindowBox = styled.div`
       : props.id === "video"
       ? "370px"
       : "300px"};
-  /* min-width: 450px;
-  min-height: 300px; */
+  min-width: 300px;
+  min-height: 300px;
+  z-index: ${props =>
+    props.id === "work"
+      ? "3"
+      : props.id === "about"
+      ? "2"
+      : props.id === "contact"
+      ? "1"
+      : props.id === "video"
+      ? "0"
+      : "unset"};
   border: ${border.default};
   box-shadow: ${shadow.default};
   /* hide scrollbar ff */
@@ -76,7 +86,7 @@ const WindowBox = styled.div`
   resize: both;
 `;
 
-const TopBar = styled.div`
+export const TopBar = styled.div`
   display: flex;
   position: sticky;
   top: 0;
@@ -89,11 +99,11 @@ const TopBar = styled.div`
   color: white;
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
   height: calc(100% - 33px);
 `;
 
-const Close = styled.div`
+export const Close = styled.div`
   cursor: pointer;
   border: 1px solid #f8dddd;
   width: 20px;
@@ -103,7 +113,7 @@ const Close = styled.div`
   justify-content: center;
 `;
 
-const Window = ({ id, name, closeWindow }) => {
+const Window = ({ id, name, closeWindow, changeArtwork }) => {
   return (
     <Draggable bounds="parent" handle=".draghandle">
       <WindowBox id={id}>
@@ -117,7 +127,7 @@ const Window = ({ id, name, closeWindow }) => {
           ) : id === "contact" ? (
             <Contact />
           ) : id === "work" ? (
-            <Work />
+            <Work changeArtwork={changeArtwork} />
           ) : id === "video" ? (
             <Player />
           ) : null}
