@@ -44,7 +44,6 @@ const Desktop = () => {
   const [currentArtwork, setCurrentArtwork] = useState("car02");
 
   const changeArtwork = id => {
-    console.log("selected id: ", id);
     setCurrentArtwork(id);
   };
 
