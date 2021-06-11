@@ -49,7 +49,7 @@ const Intro = () => {
   useEffect(() => {
     setTimeout(() => {
       setisVisible(false);
-    }, 10);
+    }, 9000);
   }, []);
 
   const delay = 500;
