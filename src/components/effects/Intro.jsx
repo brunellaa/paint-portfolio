@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { rgbText, neutral, primary } from "../utils";
+import { rgbText, neutral, primary } from "../../utils";
 import Typing from "react-typing-animation";
 
 const IntroContainer = styled.div`

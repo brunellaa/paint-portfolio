@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Desktop from "./Desktop";
-import Noiser from "./Noiser";
+import Noiser from "./effects/Noiser";
 
 const Layout = ({ children }) => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { GlobalStyles } from "./utils/global";
-import Intro from "./components/Intro";
+import Intro from "./components/effects/Intro";
 import Layout from "./components/Layout";
 import reportWebVitals from "./reportWebVitals";
 
