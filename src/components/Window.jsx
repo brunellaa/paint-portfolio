@@ -54,7 +54,7 @@ export const WindowBox = styled.div`
       : "450px%"};
   height: ${props =>
     props.id === "about"
-      ? "400px"
+      ? "600px"
       : props.id === "contact"
       ? "300px"
       : props.id === "work"
@@ -100,6 +100,7 @@ export const TopBar = styled.div`
 `;
 
 export const Content = styled.div`
+  overflow-y: ${props => (props.id === "video" ? "hidden" : "auto")};
   height: calc(100% - 33px);
 `;
 
@@ -121,7 +122,7 @@ const Window = ({ id, name, closeWindow, changeArtwork }) => {
           <div>{name}</div>
           <Close onClick={closeWindow}>X</Close>
         </TopBar>
-        <Content>
+        <Content id={id}>
           {id === "about" ? (
             <About />
           ) : id === "contact" ? (
